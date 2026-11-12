@@ -1,0 +1,222 @@
+
+/*
+  VetIA — Identidad visual editorial
+  Paleta: Burgundy / Bone / Beige / Ivory
+*/
+
+:root {
+  --vetia-burgundy: #702D38;
+  --vetia-burgundy-dark: #4A2029;
+  --vetia-burgundy-light: #8D4650;
+
+  --vetia-bone: #F3EBDD;
+  --vetia-beige: #E5D5BF;
+  --vetia-ivory: #FFFCF7;
+
+  --vetia-sand: #D9B99B;
+  --vetia-terracotta: #A85D55;
+
+  --vetia-charcoal: #2C2524;
+  --vetia-muted: #756760;
+  --vetia-border: #DED2C3;
+}
+
+/* Fondo general */
+body {
+  background: var(--vetia-bone);
+  color: var(--vetia-charcoal);
+}
+
+/* Superficies */
+article,
+section {
+  scroll-margin-top: 90px;
+}
+
+/* Campos */
+input,
+select,
+textarea {
+  color: var(--vetia-charcoal);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #A3978D;
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+}
+
+.vetia-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vetia-image-frame {
+  overflow: hidden;
+  background: var(--vetia-beige);
+  border-radius: 4px;
+}
+
+/* Fotografía protagonista */
+.vetia-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Botones */
+.vetia-button-primary {
+  background: var(--vetia-burgundy);
+  color: var(--vetia-ivory);
+  border: 1px solid var(--vetia-burgundy);
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.vetia-button-primary:hover {
+  background: var(--vetia-burgundy-dark);
+  border-color: var(--vetia-burgundy-dark);
+}
+
+.vetia-button-secondary {
+  background: var(--vetia-ivory);
+  color: var(--vetia-burgundy);
+  border: 1px solid var(--vetia-border);
+}
+
+.vetia-button-secondary:hover {
+  background: var(--vetia-beige);
+}
+
+/* Tarjetas */
+.vetia-card {
+  background: var(--vetia-ivory);
+  border: 1px solid var(--vetia-border);
+  border-radius: 5px;
+}
+
+/* Animaciones discretas */
+.vetia-fade-in {
+  animation: vetiaFadeIn 350ms ease both;
+}
+
+@keyframes vetiaFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal de registro de conocimiento */
+.disease-modal {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 90vh;
+  min-height: 0;
+}
+
+/* Único elemento que permite desplazamiento */
+.modal-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  margin: 12px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 24px,
+    #000 calc(100% - 32px),
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 24px,
+    #000 calc(100% - 32px),
+    transparent 100%
+  );
+}
+
+/* Barra Chrome, Edge y Safari */
+.modal-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+  margin: 24px 0;
+  background: transparent;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: rgba(166, 107, 97, 0);
+  background-clip: padding-box;
+  transition: background-color 0.3s ease;
+}
+
+.disease-modal:hover .modal-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(166, 107, 97, 0.25);
+}
+
+.disease-modal:hover .modal-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(166, 107, 97, 0.5);
+}
+
+/* Firefox */
+.disease-modal:hover .modal-scroll {
+  scrollbar-color: rgba(166, 107, 97, 0.25) transparent;
+}
+
+.disease-modal:hover .modal-scroll:hover {
+  scrollbar-color: rgba(166, 107, 97, 0.5) transparent;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .disease-modal {
+    max-height: 100dvh;
+    border-radius: 24px;
+  }
+
+  .modal-scroll {
+    margin: 12px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-scroll::-webkit-scrollbar-thumb {
+    transition: none;
+  }
+}
+
+/* Responsive general */
+@media (max-width: 640px) {
+  .vetia-mobile-full {
+    width: 100%;
+  }
+
+  .vetia-mobile-image {
+    max-height: 230px;
+  }
+}

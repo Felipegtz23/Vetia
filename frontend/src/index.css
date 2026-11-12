@@ -1,0 +1,152 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #702D38;
+  --color-forest-dark: #4A2029;
+  --color-lime: #D9B99B;
+  --color-graphite: #2C2524;
+  --color-soft: #F3EBDD;
+  --color-muted: #756760;
+  --color-border: #DED2C3;
+
+  --font-sans: "DM Sans", sans-serif;
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  /* Identidad VetIA */
+  --vetia-burgundy: #702D38;
+  --vetia-burgundy-dark: #4A2029;
+  --vetia-burgundy-light: #8D4650;
+
+  /* Fondos */
+  --vetia-bone: #F3EBDD;
+  --vetia-beige: #E5D5BF;
+  --vetia-ivory: #FFFCF7;
+
+  /* Acentos */
+  --vetia-sand: #D9B99B;
+  --vetia-terracotta: #A85D55;
+
+  /* Texto */
+  --vetia-charcoal: #2C2524;
+  --vetia-muted: #756760;
+
+  /* Estados */
+  --vetia-border: #DED2C3;
+  --vetia-success: #58745D;
+  --vetia-danger: #A34242;
+
+  /* Gradientes */
+  --vetia-gradient-main: linear-gradient(
+    135deg,
+    #4A2029 0%,
+    #702D38 65%,
+    #8D4650 100%
+  );
+
+  --vetia-gradient-warm: linear-gradient(
+    135deg,
+    #F3EBDD 0%,
+    #E5D5BF 100%
+  );
+
+  font-family: "DM Sans", sans-serif;
+  color: var(--vetia-charcoal);
+  background: var(--vetia-bone);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--vetia-bone);
+  color: var(--vetia-charcoal);
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Bloquea el desplazamiento de la página cuando hay un modal abierto */
+body.modal-open {
+  overflow: hidden;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: "DM Sans", sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--vetia-burgundy);
+  outline-offset: 3px;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--vetia-burgundy);
+  color: var(--vetia-ivory);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Elementos de texto */
+.section-kicker {
+  color: var(--vetia-muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
