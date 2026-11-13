@@ -72,7 +72,7 @@ Sigue los siguientes pasos para configurar el proyecto en tu entorno local.
 Abre una terminal y ejecuta:
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/Felipegtz23/Vetia.git
 ```
 
 Ingresa a la carpeta del proyecto:
