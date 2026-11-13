@@ -98,7 +98,7 @@ venv\Scripts\activate
 Instala las dependencias del backend:
 
 ```bash
-pip install -r requirements.txt
+pip install -r backend/requirements.txt
 ```
 
 ### 3. Configurar el frontend
