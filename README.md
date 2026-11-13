@@ -150,9 +150,9 @@ La evaluación de cada paciente debe ser realizada por un médico veterinario, q
 
 ## 👥 Autores
 
-- Autor 1
-- Autor 2
-- Autor 3
+- Andres Felipe Gutierrez
+- Thomas Andres Barragan Mendez
+- Andres Felipe Gomez Parra
 
 ---
 
